@@ -3,41 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>João Maia | Nutricionista Clínico & Esportivo — Emagrecimento & Performance</title>
-  <meta name="description" content="Consultoria nutricional de alta performance com João Maia. Protocolos 100% individualizados para emagrecimento saudável, hipertrofia muscular e longevidade." />
-  <meta name="keywords" content="nutricionista, joão maia nutricionista, nutrição esportiva, emagrecimento, hipertrofia, dieta personalizada, performance física" />
+  <title>João Maia | Nutricionista Clínico & Esportivo — CRN-3</title>
+  <meta name="description" content="Consultoria nutricional individual com João Maia em São Paulo e online. Planos alimentares adaptados à sua rotina real para emagrecimento, hipertrofia e saúde metabólica." />
+  <meta name="keywords" content="nutricionista são paulo, joão maia nutricionista, nutrição esportiva, emagrecimento saudável, bioimpedância inbody, hipertrofia, dieta personalizada, crn3" />
   <meta name="author" content="João Maia Nutricionista & WbMonster" />
   <meta property="og:title" content="João Maia | Nutricionista Clínico & Esportivo" />
-  <meta property="og:description" content="Planos alimentares baseados em ciência para emagrecimento, ganho de massa e performance máxima sem dietas restritivas." />
+  <meta property="og:description" content="Planos alimentares sob medida para sua rotina de trabalho e treinos. Sem dietas de gaveta ou restrições insustentáveis." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://joaomaianutricionista.com.br" />
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts: Newsreader (Editorial Serif) & Plus Jakarta Sans (Clean Interface Sans) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
-      darkMode: 'class',
       theme: {
         extend: {
           fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            heading: ['"Space Grotesk"', 'sans-serif'],
+            serif: ['"Newsreader"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
           },
           colors: {
-            brand: {
-              dark: '#090d16',
-              surface: '#0f172a',
-              card: '#1e293b',
-              border: '#334155',
-              emerald: '#10b981',
-              teal: '#14b8a6',
-              cyan: '#06b6d4',
-              accent: '#34d399',
+            stone: {
+              50: '#fafaf9',
+              100: '#f5f5f4',
+              200: '#e7e5e4',
+              300: '#d6d3d1',
+              400: '#a8a29e',
+              500: '#78716c',
+              600: '#57534e',
+              700: '#44403c',
+              800: '#292524',
+              900: '#1c1917',
+              950: '#0c0a09',
+            },
+            clinical: {
+              50: '#f4f7f5',
+              100: '#e5ece7',
+              200: '#ccdbd0',
+              300: '#a6c2af',
+              400: '#7ba28b',
+              500: '#58846c',
+              600: '#426955',
+              700: '#355344',
+              800: '#2c4337',
+              900: '#1b4332',
+              950: '#0f241b',
             }
           }
         }
@@ -50,133 +65,197 @@
 
   <style>
     body {
-      background-color: #090d16;
-      color: #f8fafc;
+      background-color: #FBFBFA;
+      color: #1C1917;
       overflow-x: hidden;
     }
-    .hero-glow {
-      background: radial-gradient(circle at 50% 20%, rgba(16, 185, 129, 0.18) 0%, rgba(6, 182, 212, 0.08) 35%, transparent 70%);
-    }
-    .glass-nav {
-      background: rgba(15, 23, 42, 0.85);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+    .editorial-border {
+      border-color: #E7E5E4;
     }
   </style>
 </head>
-<body class="selection:bg-emerald-500 selection:text-white antialiased">
+<body class="selection:bg-clinical-900 selection:text-white antialiased">
+
+  <!-- ==================== TOP ANNOUNCEMENT BAR (METADADOS REAIS) ==================== -->
+  <aside aria-label="Avisos do consultório" class="bg-stone-900 text-stone-300 text-[11px] font-mono tracking-wider py-2 px-4 border-b border-stone-800">
+    <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+        <span>CONSULTÓRIO DE NUTRIÇÃO CLÍNICA & ESPORTIVA • CRN-3 REGISTRADO</span>
+      </div>
+      <div class="hidden sm:flex items-center gap-4 text-stone-400">
+        <span>SÃO PAULO — PRESENCIAL</span>
+        <span>•</span>
+        <span>BRASIL & EXTERIOR — TELECONSULTA</span>
+      </div>
+    </div>
+  </aside>
 
   <!-- ==================== HEADER / NAVBAR ==================== -->
-  <header class="fixed top-0 left-0 right-0 z-40 glass-nav border-b border-brand-border/50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+  <header class="sticky top-0 z-40 bg-[#FBFBFA]/95 backdrop-blur-md border-b border-stone-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       
       <!-- Brand Logo -->
       <a href="#" class="flex items-center gap-3 group">
-        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-500 to-teal-400 flex items-center justify-center text-brand-dark font-extrabold shadow-lg shadow-emerald-500/20 group-hover:scale-105 transition-transform">
-          <i data-lucide="apple" class="w-5 h-5 text-slate-950 stroke-[2.5]"></i>
+        <div class="w-10 h-10 rounded-lg bg-clinical-900 flex items-center justify-center text-white font-serif text-xl font-bold shadow-sm group-hover:bg-clinical-800 transition-colors">
+          JM
         </div>
         <div class="flex flex-col">
-          <span class="font-heading font-bold text-lg text-white tracking-tight flex items-center gap-1.5">
-            João Maia <span class="text-xs px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-sans font-semibold">Nutrição</span>
+          <span class="font-serif font-bold text-xl text-stone-950 tracking-tight flex items-center gap-2">
+            João Maia
           </span>
-          <span class="text-[11px] text-slate-400 font-medium tracking-wider uppercase">Clínica & Esportiva</span>
+          <span class="text-[11px] text-stone-500 font-sans tracking-wide uppercase font-medium">Nutrição Clínica & Esportiva</span>
         </div>
       </a>
 
       <!-- Desktop Navigation -->
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
-        <a href="#sobre" class="hover:text-emerald-400 transition-colors">Sobre</a>
-        <a href="#especialidades" class="hover:text-emerald-400 transition-colors">Especialidades</a>
-        <a href="#metodologia" class="hover:text-emerald-400 transition-colors">Método</a>
-        <a href="#faq" class="hover:text-emerald-400 transition-colors">Dúvidas</a>
-        <a href="#contato" class="hover:text-emerald-400 transition-colors">Contato</a>
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-stone-600">
+        <a href="#sobre" class="hover:text-clinical-900 transition-colors">Sobre</a>
+        <a href="#especialidades" class="hover:text-clinical-900 transition-colors">Frentes Clínicas</a>
+        <a href="#metodologia" class="hover:text-clinical-900 transition-colors">Como Funciona</a>
+        <a href="#faq" class="hover:text-clinical-900 transition-colors">Dúvidas</a>
+        <a href="#contato" class="hover:text-clinical-900 transition-colors">Contato</a>
       </nav>
 
       <!-- CTA Desktop -->
-      <div class="hidden md:flex items-center gap-4">
+      <div class="hidden md:flex items-center gap-3">
         <a 
           href="#contato" 
-          class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-bold text-sm shadow-lg shadow-emerald-500/20 hover:shadow-emerald-500/40 hover:-translate-y-0.5 transition-all flex items-center gap-2"
+          class="px-5 py-2.5 rounded-lg bg-clinical-900 hover:bg-clinical-800 text-white font-medium text-xs tracking-wide uppercase transition-colors shadow-sm flex items-center gap-2"
         >
-          <i data-lucide="calendar" class="w-4 h-4 stroke-[2.5]"></i>
+          <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
           <span>Agendar Consulta</span>
         </a>
       </div>
 
       <!-- Mobile Menu Button -->
-      <button id="mobile-menu-btn" aria-label="Abrir Menu" class="md:hidden p-2 rounded-lg bg-slate-800/80 text-slate-300 hover:text-white">
-        <i data-lucide="menu" class="w-6 h-6"></i>
+      <button id="mobile-menu-btn" aria-label="Abrir Menu" class="md:hidden p-2 rounded-lg border border-stone-300 text-stone-700 hover:bg-stone-100 transition-colors">
+        <i data-lucide="menu" class="w-5 h-5"></i>
       </button>
 
     </div>
 
     <!-- Mobile Dropdown -->
-    <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-6 bg-brand-surface border-b border-brand-border space-y-3">
-      <a href="#sobre" class="mobile-nav-link block py-2 text-slate-300 hover:text-emerald-400 font-medium">Sobre o Dr. João Maia</a>
-      <a href="#especialidades" class="mobile-nav-link block py-2 text-slate-300 hover:text-emerald-400 font-medium">Especialidades</a>
-      <a href="#metodologia" class="mobile-nav-link block py-2 text-slate-300 hover:text-emerald-400 font-medium">Metodologia</a>
-      <a href="#faq" class="mobile-nav-link block py-2 text-slate-300 hover:text-emerald-400 font-medium">Perguntas Frequentes</a>
-      <a href="#contato" class="mobile-nav-link block py-2 text-emerald-400 font-bold">Agendar Avaliação</a>
+    <div id="mobile-menu" class="hidden md:hidden px-6 pt-3 pb-6 bg-[#FBFBFA] border-b border-stone-200 space-y-3 text-sm">
+      <a href="#sobre" class="mobile-nav-link block py-2 text-stone-700 hover:text-clinical-900 font-medium">Sobre o Profissional</a>
+      <a href="#especialidades" class="mobile-nav-link block py-2 text-stone-700 hover:text-clinical-900 font-medium">Frentes Clínicas</a>
+      <a href="#metodologia" class="mobile-nav-link block py-2 text-stone-700 hover:text-clinical-900 font-medium">Como Funciona o Acompanhamento</a>
+      <a href="#faq" class="mobile-nav-link block py-2 text-stone-700 hover:text-clinical-900 font-medium">Perguntas Frequentes</a>
+      <a href="#contato" class="mobile-nav-link block py-2 text-clinical-900 font-bold border-t border-stone-200 pt-3">Agendar Consulta</a>
     </div>
   </header>
 
-  <!-- ==================== HERO SECTION ==================== -->
-  <section class="relative pt-32 pb-20 md:pt-44 md:pb-32 hero-glow">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+  <!-- ==================== HERO SECTION (EDITORIAL & HUMANIZADA) ==================== -->
+  <section class="pt-12 pb-16 md:pt-20 md:pb-24 border-b border-stone-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="max-w-3xl mx-auto text-center space-y-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
         
-        <!-- Top Badge -->
-        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold tracking-wide uppercase">
-          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-          <span>Nutrição Baseada em Evidências Científicas</span>
+        <!-- Coluna Principal (Texto Editorial) -->
+        <div class="lg:col-span-7 space-y-6">
+          
+          <div class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-clinical-900">
+            <span>Atendimento Individualizado</span>
+            <span>—</span>
+            <span class="text-stone-500 font-normal">São Paulo & Online</span>
+          </div>
+
+          <h1 class="font-serif text-4xl sm:text-5xl lg:text-[52px] font-normal text-stone-950 leading-[1.14] tracking-tight">
+            Planos alimentares adaptados à sua rotina real de trabalho e treinos.
+          </h1>
+
+          <p class="text-base sm:text-lg text-stone-600 leading-relaxed max-w-xl">
+            Sem cardápios de gaveta ou restrições insustentáveis. Avaliação física completa, análise de exames de sangue e prescrição sob medida para equilibrar emagrecimento consistente, rendimento esportivo e convivência social.
+          </p>
+
+          <div class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5">
+            <a 
+              href="#contato" 
+              class="px-7 py-3.5 rounded-lg bg-clinical-900 hover:bg-clinical-800 text-white font-medium text-sm transition-colors shadow-sm flex items-center justify-center gap-2"
+            >
+              <span>Agendar Consulta Inicial</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+            <a 
+              href="#metodologia" 
+              class="px-6 py-3.5 rounded-lg border border-stone-300 hover:bg-stone-100 text-stone-800 font-medium text-sm transition-colors flex items-center justify-center gap-2"
+            >
+              <span>Ver como funciona</span>
+            </a>
+          </div>
+
+          <div class="pt-6 border-t border-stone-200 text-xs text-stone-500 flex flex-wrap items-center gap-y-2 gap-x-6 font-mono">
+            <span class="flex items-center gap-1.5">
+              <i data-lucide="check" class="w-3.5 h-3.5 text-clinical-700"></i>
+              Consultas com 60 a 75 min
+            </span>
+            <span class="flex items-center gap-1.5">
+              <i data-lucide="check" class="w-3.5 h-3.5 text-clinical-700"></i>
+              Bioimpedância InBody incluída
+            </span>
+            <span class="flex items-center gap-1.5">
+              <i data-lucide="check" class="w-3.5 h-3.5 text-clinical-700"></i>
+              Suporte contínuo no WhatsApp
+            </span>
+          </div>
+
         </div>
 
-        <!-- Headline -->
-        <h1 class="font-heading text-4xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-[1.15]">
-          Construa Sua Melhor Versão Sem Dietas Restritivas.
-        </h1>
+        <!-- Coluna Lateral (Ficha Rápida do Atendimento) -->
+        <div class="lg:col-span-5">
+          <div class="bg-white border border-stone-200 rounded-2xl p-6 sm:p-7 shadow-sm space-y-6">
+            
+            <div class="flex items-center justify-between border-b border-stone-100 pb-4">
+              <div>
+                <span class="text-xs font-mono uppercase text-stone-400">Visão Geral</span>
+                <h3 class="font-serif font-bold text-lg text-stone-900">O que está incluído na consulta</h3>
+              </div>
+              <span class="text-[11px] font-medium text-clinical-800 bg-clinical-50 border border-clinical-200 px-2.5 py-1 rounded-full">
+                Vagas disponíveis
+              </span>
+            </div>
 
-        <!-- Subtitle -->
-        <p class="text-base sm:text-lg md:text-xl text-slate-300 leading-relaxed font-normal">
-          Planos nutricionais <strong>100% individualizados</strong> para emagrecimento definitivo, hipertrofia muscular e alta performance esportiva — alinhando sua rotina, preferências e saúde metabólica.
-        </p>
+            <ol class="space-y-4 text-sm text-stone-700">
+              <li class="flex items-start gap-3">
+                <span class="font-mono text-xs text-clinical-700 bg-clinical-50 border border-clinical-200 w-6 h-6 rounded flex items-center justify-center shrink-0 mt-0.5">01</span>
+                <div>
+                  <strong class="text-stone-900 block font-semibold">Anamnese Clínica & Rotina</strong>
+                  <span class="text-xs text-stone-500 leading-relaxed">Mapeamento detalhado de horários, preferências, alergias, hábitos e histórico alimentar.</span>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="font-mono text-xs text-clinical-700 bg-clinical-50 border border-clinical-200 w-6 h-6 rounded flex items-center justify-center shrink-0 mt-0.5">02</span>
+                <div>
+                  <strong class="text-stone-900 block font-semibold">Avaliação Física InBody</strong>
+                  <span class="text-xs text-stone-500 leading-relaxed">Medição precisa de gordura corporal, massa muscular esquelética e água corporal (no presencial).</span>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="font-mono text-xs text-clinical-700 bg-clinical-50 border border-clinical-200 w-6 h-6 rounded flex items-center justify-center shrink-0 mt-0.5">03</span>
+                <div>
+                  <strong class="text-stone-900 block font-semibold">Cardápio Entregue em 48h</strong>
+                  <span class="text-xs text-stone-500 leading-relaxed">Disponibilizado pelo aplicativo exclusivo, com opções flexíveis de substituição e receitas práticas.</span>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="font-mono text-xs text-clinical-700 bg-clinical-50 border border-clinical-200 w-6 h-6 rounded flex items-center justify-center shrink-0 mt-0.5">04</span>
+                <div>
+                  <strong class="text-stone-900 block font-semibold">Canal Direto no WhatsApp</strong>
+                  <span class="text-xs text-stone-500 leading-relaxed">Tire dúvidas sobre refeições em viagens, compras no mercado ou substituições com o próprio nutricionista.</span>
+                </div>
+              </li>
+            </ol>
 
-        <!-- CTA Buttons -->
-        <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a 
-            href="#contato" 
-            class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-extrabold text-base shadow-xl shadow-emerald-500/25 hover:shadow-emerald-500/40 hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2.5"
-          >
-            <i data-lucide="message-square" class="w-5 h-5 stroke-[2.5]"></i>
-            <span>Começar Minha Transformação</span>
-          </a>
-          <a 
-            href="#metodologia" 
-            class="w-full sm:w-auto px-8 py-4 rounded-xl bg-slate-800/80 hover:bg-slate-700/80 text-white font-semibold text-base border border-slate-700 hover:border-slate-500 transition-all flex items-center justify-center gap-2"
-          >
-            <span>Conhecer o Método</span>
-            <i data-lucide="arrow-right" class="w-4 h-4"></i>
-          </a>
-        </div>
+            <div class="pt-4 border-t border-stone-100">
+              <a 
+                href="#contato" 
+                class="w-full py-3 rounded-lg bg-stone-900 hover:bg-stone-800 text-white text-xs font-semibold uppercase tracking-wider transition-colors flex items-center justify-center gap-2"
+              >
+                <span>Solicitar Horários de Atendimento</span>
+                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
 
-        <!-- Metric Cards Grid -->
-        <div class="pt-12 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 border-t border-brand-border/60 mt-12">
-          <div class="p-4 rounded-2xl bg-brand-surface/60 border border-brand-border/40 backdrop-blur-sm">
-            <span class="font-heading font-bold text-2xl sm:text-3xl text-emerald-400">+1.200</span>
-            <p class="text-xs text-slate-400 mt-1 font-medium">Pacientes Acompanhados</p>
-          </div>
-          <div class="p-4 rounded-2xl bg-brand-surface/60 border border-brand-border/40 backdrop-blur-sm">
-            <span class="font-heading font-bold text-2xl sm:text-3xl text-teal-400">100%</span>
-            <p class="text-xs text-slate-400 mt-1 font-medium">Plano Individualizado</p>
-          </div>
-          <div class="p-4 rounded-2xl bg-brand-surface/60 border border-brand-border/40 backdrop-blur-sm">
-            <span class="font-heading font-bold text-2xl sm:text-3xl text-cyan-400">98%</span>
-            <p class="text-xs text-slate-400 mt-1 font-medium">Índice de Adesão</p>
-          </div>
-          <div class="p-4 rounded-2xl bg-brand-surface/60 border border-brand-border/40 backdrop-blur-sm">
-            <span class="font-heading font-bold text-2xl sm:text-3xl text-emerald-400">24/7</span>
-            <p class="text-xs text-slate-400 mt-1 font-medium">Suporte via WhatsApp</p>
           </div>
         </div>
 
@@ -186,82 +265,75 @@
   </section>
 
   <!-- ==================== SOBRE O PROFISSIONAL ==================== -->
-  <section id="sobre" class="py-20 bg-brand-surface/40 border-y border-brand-border/40">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <section id="sobre" class="py-20 md:py-28 border-b border-stone-200 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
-        <!-- Coluna Visual / Profile Card -->
-        <div class="lg:col-span-5 flex justify-center">
-          <div class="relative w-full max-w-md">
-            <div class="absolute -inset-1.5 rounded-3xl bg-gradient-to-r from-emerald-500 to-teal-500 opacity-25 blur-xl"></div>
-            <div class="relative rounded-3xl bg-brand-card border border-brand-border p-8 space-y-6 shadow-2xl">
-              
-              <div class="w-24 h-24 rounded-2xl bg-gradient-to-br from-emerald-500 to-cyan-600 flex items-center justify-center text-white shadow-xl">
-                <i data-lucide="user-check" class="w-12 h-12 stroke-[2]"></i>
-              </div>
-
-              <div>
-                <h3 class="font-heading font-bold text-2xl text-white">João Maia</h3>
-                <p class="text-emerald-400 text-sm font-semibold mt-0.5">Nutricionista Clínico & Esportivo</p>
-                <div class="flex items-center gap-2 mt-2 text-xs text-slate-400">
-                  <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i>
-                  <span>Registro Profissional de Nutrição Ativo</span>
-                </div>
-              </div>
-
-              <div class="space-y-3 pt-4 border-t border-brand-border/60 text-xs text-slate-300">
-                <div class="flex items-center gap-3">
-                  <div class="w-2 h-2 rounded-full bg-emerald-400"></div>
-                  <span>Especialista em Bioquímica Metabólica</span>
-                </div>
-                <div class="flex items-center gap-3">
-                  <div class="w-2 h-2 rounded-full bg-emerald-400"></div>
-                  <span>Nutrição Aplicada ao Treinamento de Força</span>
-                </div>
-                <div class="flex items-center gap-3">
-                  <div class="w-2 h-2 rounded-full bg-emerald-400"></div>
-                  <span>Consultoria Presencial & Online em Todo o Brasil</span>
-                </div>
-              </div>
-
+        <!-- Perfil Editorial -->
+        <div class="lg:col-span-5">
+          <div class="bg-stone-50 border border-stone-200 rounded-2xl p-8 space-y-6 text-center sm:text-left">
+            
+            <div class="w-20 h-20 rounded-2xl bg-clinical-900 text-white flex items-center justify-center font-serif text-3xl font-bold shadow-sm mx-auto sm:mx-0">
+              JM
             </div>
+
+            <div>
+              <span class="text-xs font-mono uppercase text-clinical-800 tracking-wider">Nutricionista Responsável</span>
+              <h3 class="font-serif font-bold text-2xl text-stone-950 mt-1">Dr. João Maia</h3>
+              <p class="text-xs text-stone-500 font-mono mt-0.5">CRN-3 • São Paulo, SP</p>
+            </div>
+
+            <div class="space-y-2.5 pt-4 border-t border-stone-200 text-xs text-stone-600">
+              <div class="flex items-center gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4 text-clinical-700 shrink-0"></i>
+                <span>Especialista em Nutrição Clínica e Fisiologia Metabólica</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4 text-clinical-700 shrink-0"></i>
+                <span>Nutrição Aplicada ao Treinamento de Força e Endurance</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4 text-clinical-700 shrink-0"></i>
+                <span>Atendimento Presencial no Consultório e Consultoria Online</span>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-white border border-stone-200 text-xs text-stone-500 leading-relaxed font-sans italic">
+              "A dieta perfeita é aquela que você consegue manter por 12 meses, não por duas semanas. Minha função é encaixar a ciência nos seus hábitos, e não forçar sua vida a caber numa planilha rígida."
+            </div>
+
           </div>
         </div>
 
-        <!-- Coluna de Texto -->
+        <!-- Descrição / Manifesto Clínico -->
         <div class="lg:col-span-7 space-y-6">
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-surface border border-emerald-500/30 text-emerald-400 text-xs font-semibold tracking-wide uppercase">
-            <i data-lucide="award" class="w-3.5 h-3.5"></i> Abordagem Personalizada
+          
+          <div class="text-xs font-mono uppercase tracking-wider text-stone-400">
+            Abordagem Clínica
           </div>
 
-          <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white leading-tight">
-            Uma abordagem humana, científica e focada na sua rotina real.
+          <h2 class="font-serif text-3xl sm:text-4xl text-stone-950 leading-tight">
+            Nutrição estruturada em dados, exames laboratoriais e respeito à rotina.
           </h2>
 
-          <p class="text-slate-300 text-base leading-relaxed">
-            Esqueça as dietas de gaveta, as restrições extremas e a contagem obsessiva de calorias que não se sustentam a longo prazo. Minha missão é traduzir a ciência da nutrição moderna em um plano estratégico que se adapte ao seu estilo de vida, aos seus compromissos e aos alimentos que você realmente gosta de comer.
-          </p>
+          <div class="space-y-4 text-stone-600 text-base leading-relaxed">
+            <p>
+              O insucesso da maioria das dietas está na rigidez excessiva: listas de proibições radicais, horários impraticáveis para quem trabalha fora e a exclusão completa do convívio familiar e social.
+            </p>
+            <p>
+              Minha prática clínica combina <strong>análise bioquímica criteriosa</strong> (perfil lipídico, glicemia, inflamação e hormônios) com o cálculo preciso de calorias e macronutrientes. O resultado é um protocolo claro que preserva sua massa muscular durante o emagrecimento, otimiza sua energia nos treinos e permite que você continue frequentando almoços de família e jantares sem culpa.
+            </p>
+          </div>
 
-          <p class="text-slate-300 text-base leading-relaxed">
-            Seja para perder gordura corporal mantendo massa magra, otimizar sua carga nos treinos ou recuperar a disposição e saúde intestinal, cada estratégia é desenhada sob medida após criteriosa análise de exames laboratoriais, histórico clínico e metas individuais.
-          </p>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
-            <div class="flex items-start gap-3.5 p-4 rounded-xl bg-brand-card/60 border border-brand-border/50">
-              <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5"></i>
-              <div>
-                <h4 class="text-sm font-bold text-white">Sem Terrorismo Nutricional</h4>
-                <p class="text-xs text-slate-400 mt-1">Flexibilidade e equilíbrio para comer bem sem culpa ou isolamento social.</p>
-              </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+            <div class="p-5 rounded-xl bg-stone-50 border border-stone-200 space-y-1.5">
+              <h4 class="font-serif font-bold text-stone-900 text-lg">Sem Terrorismo Alimentar</h4>
+              <p class="text-xs text-stone-500 leading-relaxed">Nenhum alimento isolado engorda ou emagrece. Trabalhamos com equilíbrio calórico e densidade nutricional.</p>
             </div>
-
-            <div class="flex items-start gap-3.5 p-4 rounded-xl bg-brand-card/60 border border-brand-border/50">
-              <i data-lucide="activity" class="w-5 h-5 text-teal-400 shrink-0 mt-0.5"></i>
-              <div>
-                <h4 class="text-sm font-bold text-white">Foco em Performance</h4>
-                <p class="text-xs text-slate-400 mt-1">Estratégias pré e pós-treino para máxima recuperação e síntese proteica.</p>
-              </div>
+            <div class="p-5 rounded-xl bg-stone-50 border border-stone-200 space-y-1.5">
+              <h4 class="font-serif font-bold text-stone-900 text-lg">Ciência Aplicada ao Treino</h4>
+              <p class="text-xs text-stone-500 leading-relaxed">Ajustes específicos de carboidratos e proteínas em torno dos seus treinos de musculação, corrida ou crossfit.</p>
             </div>
           </div>
 
@@ -272,88 +344,84 @@
     </div>
   </section>
 
-  <!-- ==================== ESPECIALIDADES ==================== -->
-  <section id="especialidades" class="py-24 relative">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <!-- ==================== FRENTES CLÍNICAS (EQUILÍBRIO 50/50) ==================== -->
+  <section id="especialidades" class="py-20 md:py-28 border-b border-stone-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center max-w-2xl mx-auto space-y-4 mb-16">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-surface border border-emerald-500/30 text-emerald-400 text-xs font-semibold tracking-wide uppercase">
-          <i data-lucide="layers" class="w-3.5 h-3.5"></i> Áreas de Atuação
-        </div>
-        <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white">
-          Especialidades & Pilares Clínicos
+      <div class="max-w-2xl space-y-3 mb-16">
+        <span class="text-xs font-mono uppercase tracking-widest text-clinical-800">Pilares de Atuação</span>
+        <h2 class="font-serif text-3xl sm:text-4xl text-stone-950">
+          Equilíbrio entre saúde metabólica e desempenho esportivo.
         </h2>
-        <p class="text-slate-300 text-base">
-          Tratamentos estruturados com base em protocolos clínicos validados internacionalmente.
+        <p class="text-stone-600 text-base leading-relaxed">
+          Quatro áreas estruturadas para atender desde a perda de peso até atletas que buscam evolução estética e força.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         
-        <!-- Card 1: Emagrecimento -->
-        <div class="p-8 rounded-2xl bg-brand-surface border border-brand-border hover:border-emerald-500/50 transition-all group space-y-4">
-          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center group-hover:scale-110 transition-transform">
-            <i data-lucide="trending-down" class="w-6 h-6"></i>
+        <!-- Frente 1: Emagrecimento -->
+        <div class="bg-white border border-stone-200 rounded-2xl p-8 space-y-4 hover:border-clinical-700 transition-colors">
+          <div class="flex items-center justify-between">
+            <span class="font-mono text-xs text-clinical-800 font-semibold uppercase">01 • Emagrecimento</span>
+            <i data-lucide="trending-down" class="w-5 h-5 text-clinical-700"></i>
           </div>
-          <h3 class="font-heading font-bold text-xl text-white">Emagrecimento Saudável & Definição</h3>
-          <p class="text-slate-300 text-sm leading-relaxed">
-            Déficit calórico estratégico com preservação muscular, controle de saciedade e modulação hormonal para evitar o efeito sanfona.
+          <h3 class="font-serif font-bold text-2xl text-stone-950">Perda de Gordura com Preservação Muscular</h3>
+          <p class="text-stone-600 text-sm leading-relaxed">
+            Déficit calórico planejado de forma progressiva para evitar a queda brusca na taxa metabólica e a perda de massa magra. Foco na saciedade com fibras, proteínas de alto valor biológico e distribuição estratégica de refeições.
           </p>
+          <ul class="text-xs text-stone-500 space-y-1.5 pt-2 border-t border-stone-100">
+            <li>• Controle do apetite sem medicamentos desnecessários</li>
+            <li>• Fim do efeito sanfona com fase de manutenção calculada</li>
+          </ul>
         </div>
 
-        <!-- Card 2: Hipertrofia -->
-        <div class="p-8 rounded-2xl bg-brand-surface border border-brand-border hover:border-teal-500/50 transition-all group space-y-4">
-          <div class="w-12 h-12 rounded-xl bg-teal-500/10 border border-teal-500/30 text-teal-400 flex items-center justify-center group-hover:scale-110 transition-transform">
-            <i data-lucide="dumbbell" class="w-6 h-6"></i>
+        <!-- Frente 2: Hipertrofia & Rendimento -->
+        <div class="bg-white border border-stone-200 rounded-2xl p-8 space-y-4 hover:border-clinical-700 transition-colors">
+          <div class="flex items-center justify-between">
+            <span class="font-mono text-xs text-clinical-800 font-semibold uppercase">02 • Performance</span>
+            <i data-lucide="dumbbell" class="w-5 h-5 text-clinical-700"></i>
           </div>
-          <h3 class="font-heading font-bold text-xl text-white">Hipertrofia & Ganho de Massa Magra</h3>
-          <p class="text-slate-300 text-sm leading-relaxed">
-            Superávit controlado, timing de proteínas e carboidratos, suplementação ergogênica e estímulo ótimo para anabolismo muscular limpo.
+          <h3 class="font-serif font-bold text-2xl text-stone-950">Hipertrofia & Nutrição Esportiva</h3>
+          <p class="text-stone-600 text-sm leading-relaxed">
+            Ajuste de aporte calórico para ganho de massa muscular limpa. Estruturação do aporte de carboidratos para sustentar treinos de alta intensidade e prescrição criteriosa de suplementos comprovados (creatina, beta-alanina e proteínas).
           </p>
+          <ul class="text-xs text-stone-500 space-y-1.5 pt-2 border-t border-stone-100">
+            <li>• Timing de nutrientes antes e após a sessão de treino</li>
+            <li>• Recuperação acelerada e redução de dores musculares tardias</li>
+          </ul>
         </div>
 
-        <!-- Card 3: Performance Esportiva -->
-        <div class="p-8 rounded-2xl bg-brand-surface border border-brand-border hover:border-cyan-500/50 transition-all group space-y-4">
-          <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 flex items-center justify-center group-hover:scale-110 transition-transform">
-            <i data-lucide="zap" class="w-6 h-6"></i>
+        <!-- Frente 3: Saúde Intestinal & Exames -->
+        <div class="bg-white border border-stone-200 rounded-2xl p-8 space-y-4 hover:border-clinical-700 transition-colors">
+          <div class="flex items-center justify-between">
+            <span class="font-mono text-xs text-clinical-800 font-semibold uppercase">03 • Saúde Clínica</span>
+            <i data-lucide="activity" class="w-5 h-5 text-clinical-700"></i>
           </div>
-          <h3 class="font-heading font-bold text-xl text-white">Nutrição para Atletas & Praticantes</h3>
-          <p class="text-slate-300 text-sm leading-relaxed">
-            Adequação energética para praticantes de Crossfit, corrida, ciclismo, lutas e esportes de endurance, prevenindo lesões e fadiga.
+          <h3 class="font-serif font-bold text-2xl text-stone-950">Modulação de Exames & Saúde Intestinal</h3>
+          <p class="text-stone-600 text-sm leading-relaxed">
+            Mapeamento e correção de alterações em exames de sangue: colesterol elevado, triglicérides, resistência à insulina e esteatose hepática. Adequação da microbiota intestinal para reduzir distensão abdominal e má digestão.
           </p>
+          <ul class="text-xs text-stone-500 space-y-1.5 pt-2 border-t border-stone-100">
+            <li>• Leitura aprofundada de marcadores inflamatórios</li>
+            <li>• Estratégias nutricionais para regularidade do trânsito intestinal</li>
+          </ul>
         </div>
 
-        <!-- Card 4: Saúde Intestinal & Metabólica -->
-        <div class="p-8 rounded-2xl bg-brand-surface border border-brand-border hover:border-emerald-500/50 transition-all group space-y-4">
-          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center group-hover:scale-110 transition-transform">
-            <i data-lucide="heart-pulse" class="w-6 h-6"></i>
+        <!-- Frente 4: Reeducação e Hábitos -->
+        <div class="bg-white border border-stone-200 rounded-2xl p-8 space-y-4 hover:border-clinical-700 transition-colors">
+          <div class="flex items-center justify-between">
+            <span class="font-mono text-xs text-clinical-800 font-semibold uppercase">04 • Sustentabilidade</span>
+            <i data-lucide="utensils" class="w-5 h-5 text-clinical-700"></i>
           </div>
-          <h3 class="font-heading font-bold text-xl text-white">Metabolismo, Exames & Longevidade</h3>
-          <p class="text-slate-300 text-sm leading-relaxed">
-            Análise aprofundada de colesterol, glicemia, marcadores hepáticos e hormonais, equilibrando a microbiota intestinal e a imunidade.
+          <h3 class="font-serif font-bold text-2xl text-stone-950">Reeducação Alimentar & Rotina Prática</h3>
+          <p class="text-stone-600 text-sm leading-relaxed">
+            Construção de hábitos sustentáveis para profissionais com agenda corrida. Como organizar marmitas, fazer boas escolhas em restaurantes por quilo, lidar com viagens corporativas e manter a constância sem viver em dieta permanente.
           </p>
-        </div>
-
-        <!-- Card 5: Suplementação Estratégica -->
-        <div class="p-8 rounded-2xl bg-brand-surface border border-brand-border hover:border-teal-500/50 transition-all group space-y-4">
-          <div class="w-12 h-12 rounded-xl bg-teal-500/10 border border-teal-500/30 text-teal-400 flex items-center justify-center group-hover:scale-110 transition-transform">
-            <i data-lucide="pill" class="w-6 h-6"></i>
-          </div>
-          <h3 class="font-heading font-bold text-xl text-white">Suplementação de Precisão</h3>
-          <p class="text-slate-300 text-sm leading-relaxed">
-            Prescrição cirúrgica de creatina, whey, vitaminas e fitoterápicos sem desperdício de dinheiro com produtos ineficazes.
-          </p>
-        </div>
-
-        <!-- Card 6: Reeducação Comportamental -->
-        <div class="p-8 rounded-2xl bg-brand-surface border border-brand-border hover:border-cyan-500/50 transition-all group space-y-4">
-          <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 flex items-center justify-center group-hover:scale-110 transition-transform">
-            <i data-lucide="smile" class="w-6 h-6"></i>
-          </div>
-          <h3 class="font-heading font-bold text-xl text-white">Reeducação & Mudança de Hábitos</h3>
-          <p class="text-slate-300 text-sm leading-relaxed">
-            Construção de uma relação saudável com a comida, reduzindo a ansiedade alimentar e garantindo consistência por toda a vida.
-          </p>
+          <ul class="text-xs text-stone-500 space-y-1.5 pt-2 border-t border-stone-100">
+            <li>• Lista prática de compras de supermercado</li>
+            <li>• Guia de substituições alimentares por equivalência calórica</li>
+          </ul>
         </div>
 
       </div>
@@ -361,133 +429,135 @@
     </div>
   </section>
 
-  <!-- ==================== METODOLOGIA ==================== -->
-  <section id="metodologia" class="py-24 bg-brand-surface/40 border-y border-brand-border/40">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <!-- ==================== COMO FUNCIONA O ACOMPANHAMENTO ==================== -->
+  <section id="metodologia" class="py-20 md:py-28 border-b border-stone-200 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center max-w-2xl mx-auto space-y-4 mb-16">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-surface border border-emerald-500/30 text-emerald-400 text-xs font-semibold tracking-wide uppercase">
-          <i data-lucide="compass" class="w-3.5 h-3.5"></i> Passo a Passo
-        </div>
-        <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white">
-          Como Funciona o Acompanhamento
+      <div class="text-center max-w-2xl mx-auto space-y-3 mb-16">
+        <span class="text-xs font-mono uppercase tracking-widest text-clinical-800">Passo a Passo</span>
+        <h2 class="font-serif text-3xl sm:text-4xl text-stone-950">
+          Como funciona o acompanhamento
         </h2>
-        <p class="text-slate-300 text-base">
-          Do primeiro contato à manutenção contínua dos seus resultados.
+        <p class="text-stone-600 text-base">
+          Do primeiro contato aos ajustes contínuos para manter sua evolução estável.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 relative">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
         
-        <!-- Passo 1 -->
-        <div class="p-6 rounded-2xl bg-brand-card border border-brand-border space-y-4 relative">
-          <span class="font-heading font-black text-4xl text-emerald-500/30">01</span>
-          <h4 class="font-heading font-bold text-lg text-white">Anamnese Profunda</h4>
-          <p class="text-slate-300 text-xs leading-relaxed">
-            Mapeamos sua rotina, horários de treino, preferências de sabor, intolerâncias, exames de sangue recentes e objetivos centrais.
+        <div class="p-6 rounded-xl border border-stone-200 bg-[#FBFBFA] space-y-3">
+          <span class="font-mono font-bold text-2xl text-clinical-800">01</span>
+          <h4 class="font-serif font-bold text-lg text-stone-900">Consulta Inicial</h4>
+          <p class="text-stone-600 text-xs leading-relaxed">
+            Conversa com 60 a 75 minutos para entender sua rotina, horários de treino, preferências de sabor e análise de exames laboratoriais recentes.
           </p>
         </div>
 
-        <!-- Passo 2 -->
-        <div class="p-6 rounded-2xl bg-brand-card border border-brand-border space-y-4 relative">
-          <span class="font-heading font-black text-4xl text-teal-500/30">02</span>
-          <h4 class="font-heading font-bold text-lg text-white">Plano Sob Medida</h4>
-          <p class="text-slate-300 text-xs leading-relaxed">
-            Você recebe um plano alimentar prático no aplicativo e em PDF, com substituições fáceis, lista de compras e orientações detalhadas.
+        <div class="p-6 rounded-xl border border-stone-200 bg-[#FBFBFA] space-y-3">
+          <span class="font-mono font-bold text-2xl text-clinical-800">02</span>
+          <h4 class="font-serif font-bold text-lg text-stone-900">Avaliação Física</h4>
+          <p class="text-stone-600 text-xs leading-relaxed">
+            No presencial, realização da bioimpedância InBody e aferição de circunferências. No online, protocolo padronizado de medidas e fotos guiadas.
           </p>
         </div>
 
-        <!-- Passo 3 -->
-        <div class="p-6 rounded-2xl bg-brand-card border border-brand-border space-y-4 relative">
-          <span class="font-heading font-black text-4xl text-cyan-500/30">03</span>
-          <h4 class="font-heading font-bold text-lg text-white">Suporte Direto</h4>
-          <p class="text-slate-300 text-xs leading-relaxed">
-            Canal aberto no WhatsApp comigo para tirar dúvidas sobre refeições em restaurantes, trocas de alimentos e ajustes na rotina.
+        <div class="p-6 rounded-xl border border-stone-200 bg-[#FBFBFA] space-y-3">
+          <span class="font-mono font-bold text-2xl text-clinical-800">03</span>
+          <h4 class="font-serif font-bold text-lg text-stone-900">Cardápio em até 48h</h4>
+          <p class="text-stone-600 text-xs leading-relaxed">
+            Seu plano alimentar estruturado é liberado no aplicativo de pacientes, contendo lista de compras, orientações e tabelas de substituição.
           </p>
         </div>
 
-        <!-- Passo 4 -->
-        <div class="p-6 rounded-2xl bg-brand-card border border-brand-border space-y-4 relative">
-          <span class="font-heading font-black text-4xl text-emerald-500/30">04</span>
-          <h4 class="font-heading font-bold text-lg text-white">Reavaliação & Ajustes</h4>
-          <p class="text-slate-300 text-xs leading-relaxed">
-            Consultas periódicas de acompanhamento para avaliar fotos, circunferências, peso corporal e calibrar as calorias progressivamente.
+        <div class="p-6 rounded-xl border border-stone-200 bg-[#FBFBFA] space-y-3">
+          <span class="font-mono font-bold text-2xl text-clinical-800">04</span>
+          <h4 class="font-serif font-bold text-lg text-stone-900">Suporte no WhatsApp</h4>
+          <p class="text-stone-600 text-xs leading-relaxed">
+            Canal direto com o nutricionista para dúvidas do dia a dia, ajustes em restaurantes e reavaliações periódicas para calibrar calorias.
           </p>
         </div>
 
       </div>
 
-      <!-- Modalidades: Presencial & Online -->
-      <div class="mt-16 p-8 rounded-3xl bg-gradient-to-r from-emerald-950/40 via-brand-card to-teal-950/40 border border-emerald-500/30 flex flex-col md:flex-row items-center justify-between gap-8">
-        <div class="space-y-2">
-          <h3 class="font-heading font-bold text-2xl text-white">Atendimento Presencial ou Online</h3>
-          <p class="text-slate-300 text-sm max-w-2xl leading-relaxed">
-            Atendimento presencial no consultório ou consultas por videoconferência com suporte pelo aplicativo para pacientes de todo o Brasil e exterior.
+      <!-- Caixa de Modalidades (Presencial vs Online) -->
+      <div class="mt-12 p-8 rounded-2xl bg-stone-50 border border-stone-200 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="space-y-1">
+          <h3 class="font-serif font-bold text-xl text-stone-950">Atendimento Presencial em São Paulo ou Online por Teleconsulta</h3>
+          <p class="text-stone-600 text-sm max-w-2xl leading-relaxed">
+            Consultas presenciais com equipamento de bioimpedância de padrão hospitalar ou atendimento por videoconferência com o mesmo suporte pelo aplicativo para pacientes de outros estados e do exterior.
           </p>
         </div>
         <a 
           href="#contato" 
-          class="px-6 py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-sm shadow-lg shadow-emerald-500/20 shrink-0 transition-all"
+          class="px-6 py-3 rounded-lg bg-clinical-900 hover:bg-clinical-800 text-white font-medium text-xs tracking-wider uppercase transition-colors shrink-0 shadow-sm"
         >
-          Consultar Horários Disponíveis
+          Consultar Próximos Horários
         </a>
       </div>
 
     </div>
   </section>
 
-  <!-- ==================== FAQ ==================== -->
-  <section id="faq" class="py-24">
+  <!-- ==================== PERGUNTAS FREQUENTES (FAQ) ==================== -->
+  <section id="faq" class="py-20 md:py-28 border-b border-stone-200">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center space-y-4 mb-16">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-surface border border-emerald-500/30 text-emerald-400 text-xs font-semibold tracking-wide uppercase">
-          <i data-lucide="help-circle" class="w-3.5 h-3.5"></i> Tire suas Dúvidas
-        </div>
-        <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white">
-          Perguntas Frequentes
+      <div class="text-center space-y-3 mb-16">
+        <span class="text-xs font-mono uppercase tracking-widest text-clinical-800">Perguntas Frequentes</span>
+        <h2 class="font-serif text-3xl sm:text-4xl text-stone-950">
+          Respostas diretas sobre a consulta
         </h2>
       </div>
 
-      <div class="space-y-4">
+      <div class="space-y-3.5">
         
-        <div class="faq-item rounded-2xl bg-brand-surface border border-brand-border p-6 transition-all">
-          <button class="faq-trigger w-full flex items-center justify-between text-left font-heading font-bold text-lg text-white">
-            <span>Como funciona a consulta online? Tem a mesma eficiência da presencial?</span>
-            <i data-lucide="chevron-down" class="w-5 h-5 text-emerald-400 shrink-0 transition-transform"></i>
+        <div class="faq-item rounded-xl bg-white border border-stone-200 p-6 transition-all">
+          <button class="faq-trigger w-full flex items-center justify-between text-left font-serif font-bold text-lg text-stone-950">
+            <span>A consulta online funciona tão bem quanto a presencial?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-stone-400 shrink-0 transition-transform"></i>
           </button>
-          <div class="faq-content hidden pt-4 text-sm text-slate-300 leading-relaxed border-t border-brand-border/40 mt-4">
-            Sim! A consulta online é realizada por chamada de vídeo onde fazemos a mesma anamnese profunda. Você recebe orientações para fotos de evolução padronizadas e medidas corporais. O plano alimentar é disponibilizado pelo aplicativo integrado com chat direto comigo.
+          <div class="faq-content hidden pt-4 text-sm text-stone-600 leading-relaxed border-t border-stone-100 mt-4">
+            Sim. A consulta por chamada de vídeo tem exatamente a mesma duração (60 a 75 minutos) e o mesmo detalhamento de anamnese e análise de exames. Você recebe instruções simples para registrar peso, medidas e fotos padronizadas de acompanhamento. O plano alimentar e o suporte via aplicativo são idênticos.
           </div>
         </div>
 
-        <div class="faq-item rounded-2xl bg-brand-surface border border-brand-border p-6 transition-all">
-          <button class="faq-trigger w-full flex items-center justify-between text-left font-heading font-bold text-lg text-white">
-            <span>Preciso cortar carboidratos ou parar de comer o que gosto para emagrecer?</span>
-            <i data-lucide="chevron-down" class="w-5 h-5 text-emerald-400 shrink-0 transition-transform"></i>
+        <div class="faq-item rounded-xl bg-white border border-stone-200 p-6 transition-all">
+          <button class="faq-trigger w-full flex items-center justify-between text-left font-serif font-bold text-lg text-stone-950">
+            <span>Vou precisar cortar carboidratos ou abrir mão de ocasiões sociais?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-stone-400 shrink-0 transition-transform"></i>
           </button>
-          <div class="faq-content hidden pt-4 text-sm text-slate-300 leading-relaxed border-t border-brand-border/40 mt-4">
-            De forma alguma. O emagrecimento ocorre através do balanço energético e distribuição correta de macronutrientes. O plano inclui alimentos da sua rotina e flexibilidade calculada para ocasiões sociais.
+          <div class="faq-content hidden pt-4 text-sm text-stone-600 leading-relaxed border-t border-stone-100 mt-4">
+            Não. O emagrecimento depende do balanço calórico total, e não da exclusão de pães, arroz ou massas. O cardápio é calculado para incluir os alimentos que você gosta, com estratégias de compensação e flexibilidade para almoços de negócios ou jantares de fim de semana.
           </div>
         </div>
 
-        <div class="faq-item rounded-2xl bg-brand-surface border border-brand-border p-6 transition-all">
-          <button class="faq-trigger w-full flex items-center justify-between text-left font-heading font-bold text-lg text-white">
-            <span>Em quanto tempo o plano alimentar fica pronto após a consulta?</span>
-            <i data-lucide="chevron-down" class="w-5 h-5 text-emerald-400 shrink-0 transition-transform"></i>
+        <div class="faq-item rounded-xl bg-white border border-stone-200 p-6 transition-all">
+          <button class="faq-trigger w-full flex items-center justify-between text-left font-serif font-bold text-lg text-stone-950">
+            <span>Em quanto tempo recebo meu plano alimentar após a consulta?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-stone-400 shrink-0 transition-transform"></i>
           </button>
-          <div class="faq-content hidden pt-4 text-sm text-slate-300 leading-relaxed border-t border-brand-border/40 mt-4">
-            Em até 2 a 3 dias úteis seu plano alimentar individualizado estará 100% estruturado e liberado no seu aplicativo com lista de compras e receitas sugeridas.
+          <div class="faq-content hidden pt-4 text-sm text-stone-600 leading-relaxed border-t border-stone-100 mt-4">
+            Em até 48 horas úteis. Esse intervalo é necessário para calcular minuciosamente os macronutrientes, micronutrientes e equivalências para o seu caso específico, evitando qualquer prescrição genérica.
           </div>
         </div>
 
-        <div class="faq-item rounded-2xl bg-brand-surface border border-brand-border p-6 transition-all">
-          <button class="faq-trigger w-full flex items-center justify-between text-left font-heading font-bold text-lg text-white">
-            <span>Você prescreve suplementos na primeira consulta?</span>
-            <i data-lucide="chevron-down" class="w-5 h-5 text-emerald-400 shrink-0 transition-transform"></i>
+        <div class="faq-item rounded-xl bg-white border border-stone-200 p-6 transition-all">
+          <button class="faq-trigger w-full flex items-center justify-between text-left font-serif font-bold text-lg text-stone-950">
+            <span>Você prescreve suplementos logo na primeira consulta?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-stone-400 shrink-0 transition-transform"></i>
           </button>
-          <div class="faq-content hidden pt-4 text-sm text-slate-300 leading-relaxed border-t border-brand-border/40 mt-4">
-            Apenas se houver real necessidade e comprovação científica para o seu objetivo específico (como creatina ou ajuste de ingestão proteica). Priorizamos sempre a comida de verdade antes de qualquer suplemento.
+          <div class="faq-content hidden pt-4 text-sm text-stone-600 leading-relaxed border-t border-stone-100 mt-4">
+            Apenas se houver real necessidade biológica e comprovação científica para seu objetivo (como creatina, suplementação de proteína em rotinas corridas ou reposição de vitaminas deficientes nos exames). Não prescrevo fórmulas milagrosas ou produtos caros sem evidência.
+          </div>
+        </div>
+
+        <div class="faq-item rounded-xl bg-white border border-stone-200 p-6 transition-all">
+          <button class="faq-trigger w-full flex items-center justify-between text-left font-serif font-bold text-lg text-stone-950">
+            <span>Preciso levar exames de sangue recentes?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-stone-400 shrink-0 transition-transform"></i>
+          </button>
+          <div class="faq-content hidden pt-4 text-sm text-stone-600 leading-relaxed border-t border-stone-100 mt-4">
+            Se você realizou exames de sangue nos últimos 6 meses, traga os laudos para a consulta. Caso não tenha exames recentes, faremos a avaliação inicial normalmente e, se necessário, solicitarei os exames pertinentes para acompanhar seus marcadores.
           </div>
         </div>
 
@@ -496,123 +566,120 @@
     </div>
   </section>
 
-  <!-- ==================== FORMULÁRIO DE AGENDAMENTO ==================== -->
-  <section id="contato" class="py-24 bg-brand-surface/40 border-t border-brand-border/40">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+  <!-- ==================== FORMULÁRIO DE PRÉ-AGENDAMENTO ==================== -->
+  <section id="contato" class="py-20 md:py-28 bg-[#F5F5F3]">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="rounded-3xl bg-brand-surface border border-brand-border p-8 sm:p-12 shadow-2xl space-y-8">
+      <div class="bg-white border border-stone-200 rounded-2xl p-8 sm:p-12 shadow-sm space-y-8">
         
-        <div class="text-center space-y-3">
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold uppercase">
-            <i data-lucide="send" class="w-3.5 h-3.5"></i> Pré-Agendamento Rápido
-          </div>
-          <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white">
-            Dê o Primeiro Passo Hoje
+        <div class="space-y-2 text-center">
+          <span class="text-xs font-mono uppercase tracking-widest text-clinical-800">Pré-Agendamento</span>
+          <h2 class="font-serif text-3xl sm:text-4xl text-stone-950">
+            Agende sua consulta inicial
           </h2>
-          <p class="text-slate-300 text-sm">
-            Preencha seus dados abaixo para iniciar sua triagem nutricional direta no WhatsApp do Dr. João Maia.
+          <p class="text-stone-600 text-sm max-w-lg mx-auto">
+            Preencha seus dados abaixo para verificar horários disponíveis diretamente pelo WhatsApp do consultório.
           </p>
         </div>
 
-        <form id="agendamento-form" class="space-y-6">
+        <form id="agendamento-form" class="space-y-5">
           
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
             <div>
-              <label for="nome" class="block text-xs font-bold text-slate-200 uppercase tracking-wider mb-2">
+              <label for="nome" class="block text-xs font-semibold text-stone-700 uppercase tracking-wider mb-2">
                 Seu Nome Completo *
               </label>
               <div class="relative">
-                <i data-lucide="user" class="w-5 h-5 text-slate-400 absolute left-4 top-1/2 -translate-y-1/2"></i>
+                <i data-lucide="user" class="w-4 h-4 text-stone-400 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
                 <input 
                   type="text" 
                   id="nome" 
                   required 
-                  placeholder="Ex: João da Silva" 
-                  class="w-full pl-12 pr-4 py-3.5 rounded-xl bg-brand-card border border-brand-border focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 text-white placeholder-slate-500 text-sm outline-none transition-all"
+                  placeholder="Ex: Carlos Eduardo" 
+                  class="w-full pl-10 pr-3.5 py-3 rounded-lg bg-stone-50 border border-stone-300 focus:border-clinical-800 focus:bg-white focus:ring-1 focus:ring-clinical-800 text-stone-900 placeholder-stone-400 text-sm outline-none transition-all"
                 />
               </div>
             </div>
 
             <div>
-              <label for="telefone" class="block text-xs font-bold text-slate-200 uppercase tracking-wider mb-2">
+              <label for="telefone" class="block text-xs font-semibold text-stone-700 uppercase tracking-wider mb-2">
                 WhatsApp com DDD *
               </label>
               <div class="relative">
-                <i data-lucide="phone" class="w-5 h-5 text-slate-400 absolute left-4 top-1/2 -translate-y-1/2"></i>
+                <i data-lucide="phone" class="w-4 h-4 text-stone-400 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
                 <input 
                   type="tel" 
                   id="telefone" 
                   required 
                   placeholder="(11) 99999-9999" 
-                  class="w-full pl-12 pr-4 py-3.5 rounded-xl bg-brand-card border border-brand-border focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 text-white placeholder-slate-500 text-sm outline-none transition-all"
+                  class="w-full pl-10 pr-3.5 py-3 rounded-lg bg-stone-50 border border-stone-300 focus:border-clinical-800 focus:bg-white focus:ring-1 focus:ring-clinical-800 text-stone-900 placeholder-stone-400 text-sm outline-none transition-all"
                 />
               </div>
             </div>
           </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
             <div>
-              <label for="objetivo" class="block text-xs font-bold text-slate-200 uppercase tracking-wider mb-2">
+              <label for="objetivo" class="block text-xs font-semibold text-stone-700 uppercase tracking-wider mb-2">
                 Objetivo Principal *
               </label>
               <div class="relative">
-                <i data-lucide="target" class="w-5 h-5 text-slate-400 absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none"></i>
+                <i data-lucide="target" class="w-4 h-4 text-stone-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none"></i>
                 <select 
                   id="objetivo" 
                   required 
-                  class="w-full pl-12 pr-10 py-3.5 rounded-xl bg-brand-card border border-brand-border focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 text-white text-sm outline-none transition-all appearance-none"
+                  class="w-full pl-10 pr-9 py-3 rounded-lg bg-stone-50 border border-stone-300 focus:border-clinical-800 focus:bg-white focus:ring-1 focus:ring-clinical-800 text-stone-900 text-sm outline-none transition-all appearance-none"
                 >
                   <option value="" disabled selected>Selecione seu objetivo...</option>
                   <option value="Emagrecimento & Perda de Gordura">Emagrecimento & Perda de Gordura</option>
-                  <option value="Hipertrofia & Ganho de Massa">Hipertrofia & Ganho de Massa Muscular</option>
-                  <option value="Performance Esportiva">Performance Esportiva & Rendimento</option>
-                  <option value="Saúde & Reeducação Alimentar">Saúde, Exames & Reeducação Alimentar</option>
+                  <option value="Hipertrofia & Ganho de Massa Muscular">Hipertrofia & Ganho de Massa Muscular</option>
+                  <option value="Performance Esportiva (Treinos/Corridas)">Performance Esportiva (Treinos/Corridas)</option>
+                  <option value="Saúde Metabólica & Modulação de Exames">Saúde Metabólica & Modulação de Exames</option>
+                  <option value="Reeducação Alimentar & Rotina">Reeducação Alimentar & Rotina</option>
                 </select>
-                <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none"></i>
+                <i data-lucide="chevron-down" class="w-4 h-4 text-stone-400 absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none"></i>
               </div>
             </div>
 
             <div>
-              <label for="modalidade" class="block text-xs font-bold text-slate-200 uppercase tracking-wider mb-2">
-                Preferência de Atendimento
+              <label for="modalidade" class="block text-xs font-semibold text-stone-700 uppercase tracking-wider mb-2">
+                Preferência de Consulta
               </label>
               <div class="relative">
-                <i data-lucide="laptop" class="w-5 h-5 text-slate-400 absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none"></i>
+                <i data-lucide="map-pin" class="w-4 h-4 text-stone-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none"></i>
                 <select 
                   id="modalidade" 
-                  class="w-full pl-12 pr-10 py-3.5 rounded-xl bg-brand-card border border-brand-border focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 text-white text-sm outline-none transition-all appearance-none"
+                  class="w-full pl-10 pr-9 py-3 rounded-lg bg-stone-50 border border-stone-300 focus:border-clinical-800 focus:bg-white focus:ring-1 focus:ring-clinical-800 text-stone-900 text-sm outline-none transition-all appearance-none"
                 >
+                  <option value="Consulta Presencial (São Paulo)">Consulta Presencial (São Paulo)</option>
                   <option value="Consulta Online (Brasil e Exterior)">Consulta Online (Brasil e Exterior)</option>
-                  <option value="Consulta Presencial">Consulta Presencial</option>
                 </select>
-                <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none"></i>
+                <i data-lucide="chevron-down" class="w-4 h-4 text-stone-400 absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none"></i>
               </div>
             </div>
           </div>
 
           <div>
-            <label for="mensagem" class="block text-xs font-bold text-slate-200 uppercase tracking-wider mb-2">
-              Mensagem ou Detalhes (Opcional)
+            <label for="mensagem" class="block text-xs font-semibold text-stone-700 uppercase tracking-wider mb-2">
+              Detalhes Adicionais (Opcional)
             </label>
-            <div class="relative">
-              <textarea 
-                id="mensagem" 
-                rows="3" 
-                placeholder="Conte brevemente sobre sua rotina, se pratica esportes ou se possui exames recentes..." 
-                class="w-full p-4 rounded-xl bg-brand-card border border-brand-border focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 text-white placeholder-slate-500 text-sm outline-none transition-all resize-none"
-              ></textarea>
-            </div>
+            <textarea 
+              id="mensagem" 
+              rows="3" 
+              placeholder="Ex: pratico musculação 4x por semana, tenho exames de colesterol recentes..." 
+              class="w-full p-3.5 rounded-lg bg-stone-50 border border-stone-300 focus:border-clinical-800 focus:bg-white focus:ring-1 focus:ring-clinical-800 text-stone-900 placeholder-stone-400 text-sm outline-none transition-all resize-none"
+            ></textarea>
           </div>
 
           <button 
             type="submit" 
-            class="w-full py-4 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-extrabold text-base shadow-xl shadow-emerald-500/20 hover:shadow-emerald-500/40 hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2 cursor-pointer"
+            class="w-full py-4 rounded-lg bg-clinical-900 hover:bg-clinical-800 text-white font-medium text-sm transition-colors shadow-sm flex items-center justify-center gap-2 cursor-pointer"
           >
-            <i data-lucide="message-circle" class="w-5 h-5 stroke-[2.5]"></i>
-            <span>Agendar Consulta via WhatsApp</span>
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>Verificar Horários no WhatsApp</span>
           </button>
 
-          <div id="form-feedback" class="hidden p-4 rounded-xl text-sm font-medium transition-all"></div>
+          <div id="form-feedback" class="hidden p-4 rounded-lg text-sm transition-all"></div>
 
         </form>
 
@@ -622,25 +689,26 @@
   </section>
 
   <!-- ==================== FOOTER ==================== -->
-  <footer class="py-12 bg-brand-dark border-t border-brand-border/40 text-xs text-slate-500">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+  <footer class="py-12 bg-stone-950 text-stone-400 text-xs border-t border-stone-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
       
       <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
         <div class="flex items-center gap-2">
-          <span class="font-heading font-bold text-white text-base">João Maia</span>
-          <span>• Nutricionista Clínico & Esportivo</span>
+          <span class="font-serif font-bold text-white text-base">Dr. João Maia</span>
+          <span>•</span>
+          <span>Nutricionista Clínico & Esportivo • CRN-3</span>
         </div>
         <div class="flex items-center gap-6">
-          <a href="#sobre" class="hover:text-emerald-400 transition-colors">Sobre</a>
-          <a href="#especialidades" class="hover:text-emerald-400 transition-colors">Especialidades</a>
-          <a href="#metodologia" class="hover:text-emerald-400 transition-colors">Método</a>
-          <a href="#faq" class="hover:text-emerald-400 transition-colors">FAQ</a>
+          <a href="#sobre" class="hover:text-white transition-colors">Sobre</a>
+          <a href="#especialidades" class="hover:text-white transition-colors">Especialidades</a>
+          <a href="#metodologia" class="hover:text-white transition-colors">Como Funciona</a>
+          <a href="#faq" class="hover:text-white transition-colors">Dúvidas</a>
         </div>
       </div>
 
-      <div class="pt-6 border-t border-brand-border/30 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="pt-6 border-t border-stone-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-stone-500">
         <p>© 2026 Dr. João Maia. Todos os direitos reservados.</p>
-        <p>Desenvolvido com excelência técnica por <a href="https://wbmonster.com.br" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 font-semibold transition-colors">WbMonster</a>.</p>
+        <p>Desenvolvido com excelência técnica por <a href="https://wbmonster.com.br" target="_blank" rel="noopener noreferrer" class="text-stone-300 hover:text-white font-medium transition-colors">WbMonster</a>.</p>
       </div>
 
     </div>
@@ -650,7 +718,7 @@
   <aside class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
     <!-- Botão WbMonster (em cima) -->
     <div class="flex items-center gap-2 group">
-      <div class="hidden sm:flex items-center gap-2 bg-brand-surface/95 border border-cyan-500/30 text-white text-xs font-bold px-3.5 py-2 rounded-xl shadow-2xl backdrop-blur-md transition-all opacity-90 group-hover:opacity-100">
+      <div class="hidden sm:flex items-center gap-2 bg-stone-900/95 border border-cyan-500/30 text-white text-xs font-bold px-3.5 py-2 rounded-xl shadow-xl backdrop-blur-md transition-all opacity-90 group-hover:opacity-100">
         <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
         <span>Conheça a WbMonster</span>
       </div>
@@ -660,7 +728,7 @@
         rel="noopener noreferrer" 
         aria-label="Visitar WbMonster" 
         title="Visitar WbMonster (wbmonster.com.br)"
-        class="w-14 h-14 rounded-full bg-gradient-to-tr from-cyan-600 via-blue-600 to-indigo-600 hover:from-cyan-500 hover:via-blue-500 hover:to-indigo-500 text-white flex items-center justify-center shadow-xl shadow-cyan-950/50 hover:scale-110 active:scale-95 transition-all group border border-cyan-400/40 relative overflow-hidden"
+        class="w-14 h-14 rounded-full bg-gradient-to-tr from-cyan-600 via-blue-600 to-indigo-600 hover:from-cyan-500 hover:via-blue-500 hover:to-indigo-500 text-white flex items-center justify-center shadow-xl shadow-cyan-950/50 hover:scale-105 active:scale-95 transition-all group border border-cyan-400/40 relative overflow-hidden"
       >
         <i data-lucide="globe" class="w-7 h-7 group-hover:rotate-12 transition-transform"></i>
       </a>
@@ -668,16 +736,16 @@
 
     <!-- Botão WhatsApp (embaixo) -->
     <div class="flex items-center gap-2 group">
-      <div class="hidden sm:flex items-center gap-2 bg-brand-surface/95 border border-emerald-500/30 text-white text-xs font-bold px-3.5 py-2 rounded-xl shadow-2xl backdrop-blur-md transition-all opacity-90 group-hover:opacity-100">
+      <div class="hidden sm:flex items-center gap-2 bg-stone-900/95 border border-emerald-500/30 text-white text-xs font-bold px-3.5 py-2 rounded-xl shadow-xl backdrop-blur-md transition-all opacity-90 group-hover:opacity-100">
         <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-        <span>Agendar com Dr. João Maia</span>
+        <span>Falar com Dr. João Maia</span>
       </div>
       <a 
         href="https://wa.me/5511976545184?text=Ol%C3%A1%20Dr.%20Jo%C3%A3o%20Maia!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20para%20agendar%20uma%20consulta%20nutricional." 
         target="_blank" 
         rel="noopener noreferrer" 
         aria-label="Falar pelo WhatsApp" 
-        class="w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-400 text-white flex items-center justify-center shadow-xl shadow-emerald-950/50 hover:scale-110 active:scale-95 transition-all group"
+        class="w-14 h-14 rounded-full bg-clinical-900 hover:bg-clinical-800 text-white flex items-center justify-center shadow-xl shadow-stone-900/30 hover:scale-105 active:scale-95 transition-all group border border-clinical-700/40"
       >
         <i data-lucide="message-circle" class="w-7 h-7"></i>
       </a>

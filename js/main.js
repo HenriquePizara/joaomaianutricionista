@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (!nome || !telefone || !objetivo) {
         if (feedbackBox) {
-          feedbackBox.className = 'p-4 rounded-xl text-sm font-medium bg-rose-950/70 border border-rose-500/40 text-rose-300 block';
+          feedbackBox.className = 'p-4 rounded-lg text-sm font-medium bg-red-50 border border-red-200 text-red-800 block';
           feedbackBox.textContent = 'Por favor, preencha todos os campos obrigatórios (*).';
         }
         return;
@@ -115,10 +115,10 @@ Poderia me informar as datas e horários disponíveis para agendamento?`;
       const url = `https://wa.me/${CONFIG.whatsappNumero}?text=${encoded}`;
 
       if (feedbackBox) {
-        feedbackBox.className = 'p-4 rounded-xl text-sm font-medium bg-emerald-950/70 border border-emerald-500/40 text-emerald-300 block';
+        feedbackBox.className = 'p-4 rounded-lg text-sm font-medium bg-clinical-50 border border-clinical-200 text-clinical-900 block';
         feedbackBox.innerHTML = `
-          <p class="font-bold flex items-center gap-2">✅ Redirecionando para o WhatsApp de ${CONFIG.nomeProfissional}...</p>
-          <p class="text-xs text-slate-300 mt-1">Caso o aplicativo não abra automaticamente, <a href="${url}" target="_blank" class="underline font-bold text-emerald-400">clique aqui para abrir</a>.</p>
+          <p class="font-bold flex items-center gap-2">✅ Redirecionando para o WhatsApp do ${CONFIG.nomeProfissional}...</p>
+          <p class="text-xs text-stone-600 mt-1">Caso o aplicativo não abra automaticamente, <a href="${url}" target="_blank" class="underline font-bold text-clinical-900">clique aqui para abrir</a>.</p>
         `;
       }
 

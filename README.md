@@ -1,3 +1,9 @@
+> **Repositório Oficial Dedicado (ADR-0075):** [HenriquePizara/joaomaianutricionista](https://github.com/HenriquePizara/joaomaianutricionista)  
+> **Status:** 🟢 Repositório Satélite Ativo & Isolado  
+> **Última Sincronização:** 2026-09-13T07:35:30.569Z  
+
+---
+
 # João Maia — Nutricionista Clínico & Esportivo
 
 Landing page oficial de alta conversão para o nutricionista **João Maia**, com foco em emagrecimento saudável, hipertrofia muscular, performance física e longevidade.
