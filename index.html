@@ -72,6 +72,48 @@
     .editorial-border {
       border-color: #E7E5E4;
     }
+
+    /* ==================== MAGIC UI ADAPTATIONS ==================== */
+    @keyframes shimmer {
+      0% { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
+    .btn-shiny {
+      background: linear-gradient(110deg, #1B4332 0%, #1B4332 40%, #2D6A4F 50%, #1B4332 60%, #1B4332 100%);
+      background-size: 200% 100%;
+      animation: shimmer 4.5s ease-in-out infinite;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .btn-shiny:hover {
+      animation-duration: 2s;
+      box-shadow: 0 10px 25px -5px rgba(27, 67, 50, 0.28);
+    }
+
+    .bento-card {
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .bento-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 36px -12px rgba(27, 67, 50, 0.08);
+      border-color: rgba(45, 106, 79, 0.45);
+    }
+
+    .dot-pattern {
+      background-image: radial-gradient(rgba(27, 67, 50, 0.12) 1px, transparent 1px);
+      background-size: 16px 16px;
+    }
+
+    @keyframes beam-flow {
+      0% { transform: translateX(-100%); opacity: 0; }
+      40% { opacity: 1; }
+      80% { opacity: 1; }
+      100% { transform: translateX(250%); opacity: 0; }
+    }
+    .beam-trail {
+      animation: beam-flow 3s ease-in-out infinite;
+    }
   </style>
 </head>
 <body class="selection:bg-clinical-900 selection:text-white antialiased">
@@ -171,10 +213,10 @@
           <div class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5">
             <a 
               href="#contato" 
-              class="px-7 py-3.5 rounded-lg bg-clinical-900 hover:bg-clinical-800 text-white font-medium text-sm transition-colors shadow-sm flex items-center justify-center gap-2"
+              class="btn-shiny px-7 py-3.5 rounded-lg text-white font-medium text-sm shadow-sm flex items-center justify-center gap-2 group"
             >
               <span>Agendar Consulta Inicial</span>
-              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
             </a>
             <a 
               href="#metodologia" 
@@ -433,53 +475,212 @@
   <section id="metodologia" class="py-20 md:py-28 border-b border-stone-200 bg-white">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center max-w-2xl mx-auto space-y-3 mb-16">
-        <span class="text-xs font-mono uppercase tracking-widest text-clinical-800">Passo a Passo</span>
+      <div class="text-center max-w-2xl mx-auto space-y-3 mb-12">
+        <span class="text-xs font-mono uppercase tracking-widest text-clinical-800">Metodologia & Estrutura</span>
         <h2 class="font-serif text-3xl sm:text-4xl text-stone-950">
           Como funciona o acompanhamento
         </h2>
         <p class="text-stone-600 text-base">
-          Do primeiro contato aos ajustes contínuos para manter sua evolução estável.
+          Do primeiro contato aos ajustes contínuos para manter sua evolução clínica e esportiva estável.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+      <!-- ==================== MAGIC UI: ANIMATED PROGRESSION FLOW ==================== -->
+      <div class="relative mb-10 p-5 rounded-2xl border border-stone-200 bg-[#FBFBFA] overflow-hidden">
+        <!-- Connecting Line on Desktop with Animated Beam -->
+        <div class="hidden md:block absolute top-1/2 left-16 right-16 h-0.5 bg-stone-200 -translate-y-1/2 z-0">
+          <div class="beam-trail absolute top-0 left-0 w-32 h-full bg-gradient-to-r from-transparent via-clinical-600 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+          <div class="flex items-center gap-3 bg-white/90 backdrop-blur-sm border border-stone-200/80 p-3 rounded-xl shadow-2xs">
+            <span class="font-mono font-bold text-xs text-clinical-800 bg-clinical-50 border border-clinical-200 w-7 h-7 rounded-lg flex items-center justify-center shrink-0">01</span>
+            <div>
+              <p class="text-xs font-semibold text-stone-900 leading-tight">Consulta Inicial</p>
+              <span class="text-[11px] text-stone-500 font-mono">60 a 75 min</span>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3 bg-white/90 backdrop-blur-sm border border-stone-200/80 p-3 rounded-xl shadow-2xs">
+            <span class="font-mono font-bold text-xs text-clinical-800 bg-clinical-50 border border-clinical-200 w-7 h-7 rounded-lg flex items-center justify-center shrink-0">02</span>
+            <div>
+              <p class="text-xs font-semibold text-stone-900 leading-tight">InBody 770</p>
+              <span class="text-[11px] text-stone-500 font-mono">Padrão Ouro</span>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3 bg-white/90 backdrop-blur-sm border border-stone-200/80 p-3 rounded-xl shadow-2xs">
+            <span class="font-mono font-bold text-xs text-clinical-800 bg-clinical-50 border border-clinical-200 w-7 h-7 rounded-lg flex items-center justify-center shrink-0">03</span>
+            <div>
+              <p class="text-xs font-semibold text-stone-900 leading-tight">Cardápio no App</p>
+              <span class="text-[11px] text-stone-500 font-mono">Em até 48h</span>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3 bg-white/90 backdrop-blur-sm border border-stone-200/80 p-3 rounded-xl shadow-2xs">
+            <span class="font-mono font-bold text-xs text-clinical-800 bg-clinical-50 border border-clinical-200 w-7 h-7 rounded-lg flex items-center justify-center shrink-0">04</span>
+            <div>
+              <p class="text-xs font-semibold text-stone-900 leading-tight">WhatsApp Direto</p>
+              <span class="text-[11px] text-stone-500 font-mono">Suporte Contínuo</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== MAGIC UI: BENTO GRID ASYMMETRIC ==================== -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         
-        <div class="p-6 rounded-xl border border-stone-200 bg-[#FBFBFA] space-y-3">
-          <span class="font-mono font-bold text-2xl text-clinical-800">01</span>
-          <h4 class="font-serif font-bold text-lg text-stone-900">Consulta Inicial</h4>
-          <p class="text-stone-600 text-xs leading-relaxed">
-            Conversa com 60 a 75 minutos para entender sua rotina, horários de treino, preferências de sabor e análise de exames laboratoriais recentes.
-          </p>
+        <!-- Bento 1: InBody 770 (Span 2) -->
+        <div class="md:col-span-2 bento-card p-7 sm:p-8 rounded-2xl border border-stone-200 bg-[#FBFBFA] flex flex-col justify-between">
+          <div class="dot-pattern absolute inset-0 opacity-40 pointer-events-none"></div>
+          <div class="relative z-10 space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="text-[11px] font-mono tracking-wider uppercase text-clinical-800 bg-clinical-50 border border-clinical-200 px-2.5 py-1 rounded-full font-semibold">
+                Avaliação Física Avançada
+              </span>
+              <span class="text-stone-400 font-mono text-xs">Padrão Hospitalar</span>
+            </div>
+            
+            <div class="space-y-2">
+              <h3 class="font-serif font-bold text-2xl text-stone-950 flex items-center gap-2.5">
+                <i data-lucide="activity" class="w-6 h-6 text-clinical-700"></i>
+                Bioimpedância Segmentar InBody 770
+              </h3>
+              <p class="text-stone-600 text-sm leading-relaxed max-w-xl">
+                Diferente de balanças convencionais, o InBody 770 afere a impedância direta de cada membro e tronco em 6 frequências distintas. Você acompanha o ganho real de massa magra e perda de gordura sem falsas ilusões de desidratação.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+              <div class="bg-white p-3.5 rounded-xl border border-stone-200 shadow-2xs">
+                <span class="text-[11px] font-mono uppercase text-stone-500 block">Massa Esquelética</span>
+                <strong class="text-sm font-semibold text-stone-900">Segmentar por Membro</strong>
+                <p class="text-[11px] text-stone-500 mt-0.5">Braços, pernas e tronco isolados</p>
+              </div>
+              <div class="bg-white p-3.5 rounded-xl border border-stone-200 shadow-2xs">
+                <span class="text-[11px] font-mono uppercase text-stone-500 block">Gordura Visceral</span>
+                <strong class="text-sm font-semibold text-stone-900">Nível & Área em cm²</strong>
+                <p class="text-[11px] text-stone-500 mt-0.5">Indicador cardiovascular real</p>
+              </div>
+              <div class="bg-white p-3.5 rounded-xl border border-stone-200 shadow-2xs">
+                <span class="text-[11px] font-mono uppercase text-stone-500 block">Água Corporal</span>
+                <strong class="text-sm font-semibold text-stone-900">Intra / Extracelular</strong>
+                <p class="text-[11px] text-stone-500 mt-0.5">Monitoramento de retenção</p>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="p-6 rounded-xl border border-stone-200 bg-[#FBFBFA] space-y-3">
-          <span class="font-mono font-bold text-2xl text-clinical-800">02</span>
-          <h4 class="font-serif font-bold text-lg text-stone-900">Avaliação Física</h4>
-          <p class="text-stone-600 text-xs leading-relaxed">
-            No presencial, realização da bioimpedância InBody e aferição de circunferências. No online, protocolo padronizado de medidas e fotos guiadas.
-          </p>
+        <!-- Bento 2: Cardápio no App (Span 1) -->
+        <div class="bento-card p-7 sm:p-8 rounded-2xl border border-stone-200 bg-[#FBFBFA] flex flex-col justify-between">
+          <div class="relative z-10 space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="text-[11px] font-mono tracking-wider uppercase text-clinical-800 bg-clinical-50 border border-clinical-200 px-2.5 py-1 rounded-full font-semibold">
+                Prescrição 48h
+              </span>
+              <i data-lucide="smartphone" class="w-5 h-5 text-clinical-700"></i>
+            </div>
+            
+            <div class="space-y-2">
+              <h3 class="font-serif font-bold text-xl text-stone-950">
+                Plano Estruturado no App
+              </h3>
+              <p class="text-stone-600 text-xs sm:text-sm leading-relaxed">
+                Acesso imediato no celular ao cardápio com quantidades exatas, horários de ingestão e receitas práticas.
+              </p>
+            </div>
+
+            <ul class="space-y-2.5 pt-3 border-t border-stone-200 text-xs text-stone-700 font-medium">
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-clinical-700 shrink-0"></i>
+                <span>Lista inteligente de supermercado</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-clinical-700 shrink-0"></i>
+                <span>Tabela de substituições calóricas</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-clinical-700 shrink-0"></i>
+                <span>Alarmes de hidratação e refeição</span>
+              </li>
+            </ul>
+          </div>
         </div>
 
-        <div class="p-6 rounded-xl border border-stone-200 bg-[#FBFBFA] space-y-3">
-          <span class="font-mono font-bold text-2xl text-clinical-800">03</span>
-          <h4 class="font-serif font-bold text-lg text-stone-900">Cardápio em até 48h</h4>
-          <p class="text-stone-600 text-xs leading-relaxed">
-            Seu plano alimentar estruturado é liberado no aplicativo de pacientes, contendo lista de compras, orientações e tabelas de substituição.
-          </p>
+        <!-- Bento 3: Suporte Contínuo no WhatsApp (Span 1) -->
+        <div class="bento-card p-7 sm:p-8 rounded-2xl border border-stone-200 bg-[#FBFBFA] flex flex-col justify-between">
+          <div class="relative z-10 space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="text-[11px] font-mono tracking-wider uppercase text-clinical-800 bg-clinical-50 border border-clinical-200 px-2.5 py-1 rounded-full font-semibold">
+                Canal Direto
+              </span>
+              <i data-lucide="message-circle" class="w-5 h-5 text-clinical-700"></i>
+            </div>
+            
+            <div class="space-y-2">
+              <h3 class="font-serif font-bold text-xl text-stone-950">
+                Suporte em Tempo Real
+              </h3>
+              <p class="text-stone-600 text-xs sm:text-sm leading-relaxed">
+                Dúvidas em jantares a negócios, substituição de ingredientes ou ajustes pré-prova com resposta ágil.
+              </p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-emerald-50/70 border border-emerald-200/80 text-xs text-emerald-900 space-y-1">
+              <div class="flex items-center gap-1.5 font-semibold">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span>Canal Ativo para Pacientes</span>
+              </div>
+              <p class="text-[11px] text-emerald-800 leading-snug">
+                Sem intermediários ou respostas genéricas automatizadas.
+              </p>
+            </div>
+          </div>
         </div>
 
-        <div class="p-6 rounded-xl border border-stone-200 bg-[#FBFBFA] space-y-3">
-          <span class="font-mono font-bold text-2xl text-clinical-800">04</span>
-          <h4 class="font-serif font-bold text-lg text-stone-900">Suporte no WhatsApp</h4>
-          <p class="text-stone-600 text-xs leading-relaxed">
-            Canal direto com o nutricionista para dúvidas do dia a dia, ajustes em restaurantes e reavaliações periódicas para calibrar calorias.
-          </p>
+        <!-- Bento 4: Análise Laboratorial e Otimização Metabólica (Span 2) -->
+        <div class="md:col-span-2 bento-card p-7 sm:p-8 rounded-2xl border border-stone-200 bg-[#FBFBFA] flex flex-col justify-between">
+          <div class="dot-pattern absolute inset-0 opacity-40 pointer-events-none"></div>
+          <div class="relative z-10 space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="text-[11px] font-mono tracking-wider uppercase text-clinical-800 bg-clinical-50 border border-clinical-200 px-2.5 py-1 rounded-full font-semibold">
+                Nutrição de Precisão
+              </span>
+              <i data-lucide="flask-conical" class="w-5 h-5 text-clinical-700"></i>
+            </div>
+            
+            <div class="space-y-2">
+              <h3 class="font-serif font-bold text-2xl text-stone-950">
+                Análise Laboratorial & Otimização Metabólica
+              </h3>
+              <p class="text-stone-600 text-sm leading-relaxed max-w-xl">
+                Não olhamos apenas os "valores de referência normais" do laboratório. Buscamos as faixas ideais de rendimento: regulação hormonal, resistência à insulina, saúde tireoidiana e perfil inflamatório.
+              </p>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-2 pt-2">
+              <span class="text-xs font-mono bg-white px-3 py-1.5 rounded-lg border border-stone-200 text-stone-700 shadow-2xs">
+                • Glicemia & HOMA-IR
+              </span>
+              <span class="text-xs font-mono bg-white px-3 py-1.5 rounded-lg border border-stone-200 text-stone-700 shadow-2xs">
+                • Perfil Lipídico Avançado
+              </span>
+              <span class="text-xs font-mono bg-white px-3 py-1.5 rounded-lg border border-stone-200 text-stone-700 shadow-2xs">
+                • Painel Tireoidiano (TSH / T3 / T4)
+              </span>
+              <span class="text-xs font-mono bg-white px-3 py-1.5 rounded-lg border border-stone-200 text-stone-700 shadow-2xs">
+                • Vitamina D & Ferritina
+              </span>
+              <span class="text-xs font-mono bg-white px-3 py-1.5 rounded-lg border border-stone-200 text-stone-700 shadow-2xs">
+                • PCR Ultrassensível
+              </span>
+            </div>
+          </div>
         </div>
 
       </div>
 
-      <!-- Caixa de Modalidades (Presencial vs Online) -->
+      <!-- Caixa de Modalidades (Presencial vs Online) com Shiny Button CTA -->
       <div class="mt-12 p-8 rounded-2xl bg-stone-50 border border-stone-200 flex flex-col md:flex-row items-center justify-between gap-6">
         <div class="space-y-1">
           <h3 class="font-serif font-bold text-xl text-stone-950">Atendimento Presencial em São Paulo ou Online por Teleconsulta</h3>
@@ -489,9 +690,10 @@
         </div>
         <a 
           href="#contato" 
-          class="px-6 py-3 rounded-lg bg-clinical-900 hover:bg-clinical-800 text-white font-medium text-xs tracking-wider uppercase transition-colors shrink-0 shadow-sm"
+          class="btn-shiny px-7 py-3.5 rounded-lg text-white font-medium text-xs tracking-wider uppercase shadow-sm shrink-0 flex items-center gap-2 group"
         >
-          Consultar Próximos Horários
+          <span>Consultar Próximos Horários</span>
+          <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
         </a>
       </div>
 
@@ -673,9 +875,9 @@
 
           <button 
             type="submit" 
-            class="w-full py-4 rounded-lg bg-clinical-900 hover:bg-clinical-800 text-white font-medium text-sm transition-colors shadow-sm flex items-center justify-center gap-2 cursor-pointer"
+            class="btn-shiny w-full py-4 rounded-lg text-white font-medium text-sm shadow-sm flex items-center justify-center gap-2 cursor-pointer group"
           >
-            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <i data-lucide="message-circle" class="w-4 h-4 transition-transform group-hover:scale-110"></i>
             <span>Verificar Horários no WhatsApp</span>
           </button>
 
